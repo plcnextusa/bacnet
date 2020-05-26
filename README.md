@@ -33,7 +33,7 @@ root@axcf2152:~# ./setup.sh
 ### Install the container from https://hub.docker.com/r/dclark3774/bacnet
 
 ```bash
-root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v001
+root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v002
 ```
 This command will install and create your container which will run with the balena-engine from boot by default.
 
@@ -51,11 +51,18 @@ this set of commands will create the necessary scheduling task with the "crontab
 ```bash
 root@axcf2152:~# cat <<EOT >> /var/spool/cron/startup
 
-@reboot sleep 20s && /usr/bin/balena-engine start bacnetgw >> /opt/plcnext/logs/BACnet.logs
+@reboot sleep 20s && /usr/bin/balena-engine start bacnetgw
 
 EOT
 ```
 ```bash
 root@axcf2152:~# crontab /var/spool/cron/startup
+```
+### Logs:
+
+To view the log file from the container, type the below command:
+
+```bash
+balena-engine logs bacnetgw
 ```
 
