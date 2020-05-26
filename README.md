@@ -46,18 +46,12 @@ root@axcf2152:~# balena-engine stop bacnetgw
 ```
 ### Part 3 - Auto Start BACnet gateway at device boot-up
 
-this set of commands will create the necessary scheduling task with the "crontabs" function.
+this set of commands will create the necessary scheduling task with Balena Engine.
 
 ```bash
-root@axcf2152:~# cat <<EOT >> /var/spool/cron/startup
-
-@reboot sleep 20s && /usr/bin/balena-engine start bacnetgw
-
-EOT
+balena-engine run -d --restart unless-stopped bacnetgw
 ```
-```bash
-root@axcf2152:~# crontab /var/spool/cron/startup
-```
+
 ### Logs:
 
 To view the log file from the container, type the below command:
