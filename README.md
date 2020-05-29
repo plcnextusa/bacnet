@@ -14,8 +14,8 @@ This is part of a series of articles that demonstrate how to install Balena-engi
 4. Make sure your Internet connection is intact, via command-line ping 8.8.8.8
 
 
-### Download the Project to the controller
-
+### Download Balena to the controller
+Run this command in the /opt/plcnext directory
 ```bash
 root@axcf2152:~# git clone https://github.com/PLCnext/Docker_GettingStarted.git 
 
