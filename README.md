@@ -35,7 +35,7 @@ root@axcf2152:~# ./setup.sh
 ```bash
 root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v003
 ```
-This command will install and create your container which will run with the balena-engine from boot by default.
+This command will install and create your container which will run with the balena-engine after download.
 
 ### To exit, you must close the terminal and re-open a new session.
 
