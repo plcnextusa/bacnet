@@ -51,6 +51,9 @@ this set of commands will create the necessary scheduling task with Balena Engin
 ```bash
 balena-engine run -d --restart unless-stopped bacnetgw
 ```
+### Part 4 - Set up the gateway
+
+View the PDF in this repository for setup and use of the BACnet gateway once it is installed and running.
 
 ### Logs:
 
