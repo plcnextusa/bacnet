@@ -35,7 +35,7 @@ root@axcf2152:~# ./setup.sh
 ### If you are having issues installing please refer to the additional information in the PDF
 
 ```bash
-root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v003
+root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v004
 ```
 This command will install and create your container which will run with the balena-engine after download.
 
