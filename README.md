@@ -32,6 +32,8 @@ root@axcf2152:~# ./setup.sh
 
 ### Install the container from https://hub.docker.com/r/dclark3774/bacnet
 
+## If you are having issues installing please refer to the additional information in the PDF
+
 ```bash
 root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v003
 ```
