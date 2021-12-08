@@ -15,19 +15,8 @@ This is part of a series of articles that demonstrate how to install Balena-engi
 
 
 ### Download Balena to the controller
-Run this command in the /opt/plcnext directory
-```bash
-root@axcf2152:~# git clone https://github.com/PLCnext/Docker_GettingStarted.git 
+Download the balena-engine app from the PLCnext Store
 
-root@axcf2152:~# cd Docker_GettingStarted
-```
-### Install Balena
-
-To install balena-engine run the setup.sh
-```bash
-root@axcf2152:~# chmod +x setup.sh
-root@axcf2152:~# ./setup.sh
-```
 ### Part 2 - Installation of BACnet gateway container
 
 ### Install the container from https://hub.docker.com/r/dclark3774/bacnet
@@ -35,7 +24,7 @@ root@axcf2152:~# ./setup.sh
 ### If you are having issues installing please refer to the additional information in the PDF
 
 ```bash
-root@axcf2152:~# balena-engine run -it -p 2000:2000 -p 47807-47810:47807-47810 --network=host --privileged --name=bacnetgw dclark3774/bacnet:v005
+root@axcf2152:~# balena-engine run -it --network=host --privileged --name=bacnetgw dclark3774/bacnet:v005
 ```
 This command will install and create your container which will run with the balena-engine after download.
 
@@ -51,7 +40,7 @@ root@axcf2152:~# balena-engine stop bacnetgw
 this set of commands will create the necessary scheduling task with Balena Engine.
 
 ```bash
-balena-engine run -d --restart unless-stopped bacnetgw
+balena-engine container update --restart unless-stopped bacnetgw
 ```
 ### Part 4 - Set up the gateway
 
