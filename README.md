@@ -15,7 +15,9 @@ This is part of a series of articles that demonstrate how to install Balena-engi
 
 
 ### Download Balena to the controller
-Download the balena-engine app from the PLCnext Store
+Download the balena-engine app from the PLCnext Store and install in the WBM.
+
+https://www.plcnextstore.com/#/
 
 ### Part 2 - Installation of BACnet gateway container
 
